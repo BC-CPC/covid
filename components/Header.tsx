@@ -5,7 +5,8 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontWeight: 400,
         fontSize: '32px',
-        margin: theme.spacing(0, 0, 0, 4)
+        margin: theme.spacing(0, 0, 0, 4),
+        textAlign: 'center'
     },
     logo: {
         width: '20rem'
