@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.12.x
+
+    - name: Build project
+      run: npm run build
+    
+    - name: Export project
+      run: npm run export
+    
+    - name: Deploy to GitHub pages
+      uses: crazy-max/ghaction-github-pages@v1.4.0
+      with:
+        build-dir: out
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
