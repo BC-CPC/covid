@@ -83,7 +83,7 @@ class Index extends React.Component<IndexProps, IndexState> {
 
                 <div className={classes.captionBox}>
                     <div className={classes.test}>
-                        <img className={classes.covidImage} src="/coronavirus.png" alt="Coronavirus" />
+                        <img className={classes.covidImage} src="/bc-cpc-covid-19/coronavirus.png" alt="Coronavirus" />
                         <Typography className={classes.sourceTag} variant="caption">
                             Public Health Image Library (#23312) <br />
                             Centers for Disease Control and Prevention
