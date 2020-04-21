@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontWeight: 400,
         fontSize: '32px',
+        margin: theme.spacing(0, 0, 0, 4)
     },
     logo: {
         width: '20rem'
@@ -28,7 +29,7 @@ const Header: React.FunctionComponent = () => {
                     <div className={classes.container}>
                         <img className={classes.logo} src="/bc-cpc-covid-19/logo.svg" />
                         <Typography className={classes.title} variant="h6">
-                            &nbsp; / COVID-19 Resource Center
+                            COVID-19 Resource Library
                         </Typography>
                     </div>
                 </Toolbar>
