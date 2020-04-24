@@ -29,7 +29,7 @@ const Header: React.FunctionComponent = () => {
             <AppBar position="static">
                 <Toolbar>
                     <div className={classes.container}>
-                        <img className={classes.logo} src="/covid-frontend/logo.svg" />
+                        <img className={classes.logo} src="/covid/logo.svg" />
                         <Typography className={classes.title} variant="h6">
                             COVID-19 Resource Library
                         </Typography>
