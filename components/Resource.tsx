@@ -42,7 +42,7 @@ type ResourceProps = {
 
 const ResourceComponent: React.FunctionComponent<ResourceProps> = ({resource}) => {
     const classes = useStyles();
-    var caption = resource.date + ". ";
+    var caption = "";
     var iconFunction = undefined;
     
     if (resource.type) {
