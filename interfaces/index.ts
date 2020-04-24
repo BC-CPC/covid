@@ -1,17 +1,17 @@
 export type Resource = {
     name: string,
     publisher: string,
-    location: string,
+    origin: string,
     date: string,
     type?: string,
-    // todo add link
+    link: string
 }
 
 export type Criteria = {
     audience: string,
     resourceType: string,
     topic: string,
-    location: string
+    origin: string
 }
 
 export type CriteriaType = keyof Criteria
@@ -31,28 +31,16 @@ export const criteriaDataTable: CriteriaDataTable = {
             'C'
         ]
     },
-    location: {
-        name: 'Location',
-        options: [
-            'BC',
-            'Canada',
-            'World Wide'
-        ]
+    origin: {
+        name: 'Origin',
+        options: []
     },
     resourceType: {
         name: 'Resource Type',
-        options: [
-            'Guide',
-            'Website',
-            'Pamphlet'
-        ]
+        options: []
     },
     audience: {
         name: 'Audience',
-        options: [
-            'Nurses',
-            'Hospitals',
-            'Eveeryone'
-        ]
+        options: []
     }
 }

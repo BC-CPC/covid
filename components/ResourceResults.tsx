@@ -34,46 +34,6 @@ const mainStyles = (theme: Theme) => createStyles(({
     }
 }));
 
-var debug = true
-const dummyState: ResultsState = {
-    results: [
-        {
-            name: 'Test Resource',
-            publisher: 'BC Center for Palliative Care',
-            location: 'BC',
-            date: '20 April, 2019',
-            type: 'Website'
-        },
-        {
-            name: 'Test Resource',
-            publisher: 'BC Center for Palliative Care',
-            location: 'BC',
-            date: '20 April, 2019',
-            type: 'Guide'
-        },
-        {
-            name: 'Test Resource',
-            publisher: 'BC Center for Palliative Care',
-            location: 'BC',
-            date: '20 April, 2019',
-            type: 'Pamphlet'
-        },
-        {
-            name: 'Test Resource',
-            publisher: 'BC Center for Palliative Care',
-            location: 'BC',
-            date: '20 April, 2019'
-        },
-        {
-            name: 'Test Resource',
-            publisher: 'BC Center for Palliative Care',
-            location: 'BC',
-            date: '20 April, 2019'
-        },
-    ],
-    resultsStatus: 'complete'
-};
-
 class ResourceResults extends React.Component<ResultsProps, ResultsState> {
     constructor(props: ResultsProps) {
         super(props);
@@ -88,28 +48,16 @@ class ResourceResults extends React.Component<ResultsProps, ResultsState> {
         this.search();
     }
 
-    debugSearch() {
-        setTimeout(() => {
-            this.setState(dummyState)
-        }, 1000);
-    }
-
     async search() {
         this.setState({
             resultsStatus: 'loading'
         });
 
-        if (debug) {
-            this.debugSearch();
-            return;
-        }
-
         try {
-            const criteria = this.props.criteria
-            const request = await fetch('abc', {
+            const request = await fetch('https://bc-cpc-covid.azurewebsites.net/search', {
                 method: 'POST',
                 body: JSON.stringify({
-                    criteria
+                    query: this.props.criteria
                 })
             });
             const responseJson = await request.json();

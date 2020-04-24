@@ -57,14 +57,14 @@ class Index extends React.Component<IndexProps, IndexState> {
             criteria: {
                 audience: '',
                 topic: '',
-                location: '',
+                origin: '',
                 resourceType: ''
             }
         };
     }
 
     async componentDidMount() {
-        const request = await fetch('https://gist.githubusercontent.com/mkotb/7f23dbc36fbbe24de2ef3e9ffad9627e/raw/4138da061f1e2c3db5c17949039b06cbe7b11719/criteriaDataTable.json');
+        const request = await fetch('https://bc-cpc-covid.azurewebsites.net/criteria');
         const jsonResult = await request.json();
 
         Object.keys(jsonResult).forEach((key) => {

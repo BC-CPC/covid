@@ -53,7 +53,7 @@ const ResourceComponent: React.FunctionComponent<ResourceProps> = ({resource}) =
        caption += resource.type + ". ";
     }
 
-    caption += resource.publisher + " in " + resource.location + ".";
+    caption += resource.publisher + " in " + resource.origin + ".";
 
     return (
         <div className={classes.root}>
@@ -65,7 +65,7 @@ const ResourceComponent: React.FunctionComponent<ResourceProps> = ({resource}) =
 
             <div className={classes.description}>
                 <Typography className={classes.name}>
-                    <a href="/">
+                    <a href={resource.link}>
                         {resource.name}
                     </a>
                 </Typography>
