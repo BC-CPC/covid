@@ -1,15 +1,39 @@
 import { Resource } from "../interfaces";
 import { makeStyles, Typography } from "@material-ui/core";
-import { LibraryBooks, Web } from "@material-ui/icons";
+import { LibraryBooks, Web, Description, Build, Class, OndemandVideo, VideoCall, Mic } from "@material-ui/icons";
 import { ReactChild } from "react";
 
 const resourceTypeIcons: Record<string, (args: any) => ReactChild> = {
     'Guide': (args) => (
         <LibraryBooks {...args} />
     ),
-    'Website': (args) => (
-        <Web {...args} />
+    'Article': (args) => (
+        <LibraryBooks {...args} />
     ),
+    'Fact Sheet': (args) => (
+        <LibraryBooks {...args} />
+    ),
+    'Other Publication': (args) => (
+        <Description {...args} />
+    ),
+    'Peer-reviewed Publication': (args) => (
+        <Description {...args} />
+    ),
+    'Tools': (args) => (
+        <Build {...args} />
+    ),
+    'Online Training Modules': (args) => (
+        <Class {...args} />
+    ),
+    'Video': (args) => (
+        <OndemandVideo {...args} />
+    ),
+    'Webinar': (args) => (
+        <VideoCall {...args} />
+    ),
+    'Podcast': (args) => (
+        <Mic {...args} />
+    )
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +73,12 @@ const ResourceComponent: React.FunctionComponent<ResourceProps> = ({resource}) =
         iconFunction = resourceTypeIcons[resource.type];
     }
 
+    if (!iconFunction) {
+        iconFunction = (args: any) => (
+            <Web {...args} />
+        )
+    }
+
     if (resource.type) {
        caption += resource.type + ". ";
     }
@@ -59,7 +89,7 @@ const ResourceComponent: React.FunctionComponent<ResourceProps> = ({resource}) =
         <div className={classes.root}>
             <div className={classes.icon}>
                 {
-                    iconFunction && iconFunction({fontSize: 'inherit', alt: resource.type})
+                    iconFunction({fontSize: 'inherit', alt: resource.type})
                 }
             </div>
 
