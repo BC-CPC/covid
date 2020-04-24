@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 const isProd = (process.env.NODE_ENV || 'production') === 'production'
 
-const assetPrefix = isProd ? '/bc-cpc-covid-19' : ''
+const assetPrefix = isProd ? '/covid-frontend' : ''
 
 module.exports = {
   exportPathMap: () => ({
