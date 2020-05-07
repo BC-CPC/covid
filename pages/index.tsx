@@ -90,7 +90,8 @@ class Index extends React.Component<IndexProps, IndexState> {
                         </Typography>
                     </div>
                     <Typography className={classes.caption} variant="caption">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend eros eget dolor luctus fermentum. Sed sed massa in sem malesuada molestie vitae id purus. Aenean interdum mauris quis dui euismod ornare. Aenean in ex sed nisl luctus tempor ac mollis dolor. 
+                        Find palliative care and self-care resources developed or adapted to the context of COVID-19. <br /> <br />
+                        The resources are collected from around the world and organized according to topic, type, and issue province/country. 
                     </Typography>
                 </div>
 
