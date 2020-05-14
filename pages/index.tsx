@@ -90,8 +90,14 @@ class Index extends React.Component<IndexProps, IndexState> {
                         </Typography>
                     </div>
                     <Typography className={classes.caption} variant="caption">
-                        Find palliative care and self-care resources developed or adapted to the context of COVID-19. <br /> <br />
-                        The resources are collected from around the world and organized according to topic, type, and issue province/country. 
+                        The team at BC-CPC has gathered links to education, recorded webinars, publications and other practice support tools that have been developed or adapted for the time of COVID-19.
+                        They are intended for formal Health Care Providers caring for people affected by life-limiting illness.
+                        The resources have not been reviewed in detail and are not created or endorsed by BC-CPC. <br />
+
+                        This page will be updated on an ongoing basis.
+                        To suggest resources to be added or to report inactive links, contact <a href="mailto:kyue@bc-cpc.ca">Kathleen Yue</a>. <br />
+
+                        For a schedule of upcoming live webinars related to palliative care in the time of COVID-19, take a look at our <a href="https://bc-cpc.ca/cpc/events/">Events</a> calendar.
                     </Typography>
                 </div>
 
