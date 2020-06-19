@@ -20,9 +20,7 @@ export default class PageDocument extends Document {
 
                             gtag('js', new Date());
                             
-                            gtag('config', '${GA_TRACKING_ID}', {
-                                page_path: window.location.pathname
-                            })
+                            gtag('config', '${GA_TRACKING_ID}')
                           `
                       }} />
                 </Head>
