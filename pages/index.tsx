@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import { Styles, StyleRulesCallback, WithStyles } from '@material-ui/core/styles/withStyles';
 import { Resource, CriteriaType, Criteria, criteriaDataTable, CriteriaData } from '../interfaces';
 import ResourceResults from '../components/ResourceResults';
+import SurveySidebar from '../components/SurveySidebar';
 
 const theme = createMuiTheme({
     palette: {
@@ -116,6 +117,8 @@ class Index extends React.Component<IndexProps, IndexState> {
                         <ResourceResults onCriteriaChange={this.onSearchCriteriaChange.bind(this)}
                                         criteria={this.state.criteria} />
                     </Container>
+
+                    <SurveySidebar />
 
                     <style global jsx>{`
                         body {
