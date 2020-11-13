@@ -52,7 +52,8 @@ const useSurveyButtonStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.main,
+        cursor: 'pointer',
         borderTopRightRadius: '4px',
         borderBottomRightRadius: '4px',
         boxShadow: `
@@ -93,13 +94,6 @@ const SurveyButton: React.FunctionComponent<SurveyButtonProps> = ({vertical, onC
     return (
         <div className={rootClasses.join(' ')} onClick={onClick}>
             <Typography className={textClasses.join(' ')} variant="button">
-                Fill
-
-                {vertical ? 
-                    ' '
-                    :
-                    <br /> }
-
                 Feedback
                 
                 {vertical ? 

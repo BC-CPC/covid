@@ -11,6 +11,9 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: '#007F8C'
+        },
+        secondary: {
+            main: '#ee7a29'
         }
     }
 })
@@ -107,7 +110,9 @@ class Index extends React.Component<IndexProps, IndexState> {
                             This page will be updated on an ongoing basis.
                             To suggest resources to be added or to report inactive links, contact <a href="mailto:kyue@bc-cpc.ca">Kathleen Yue</a>. <br /> <br />
 
-                            For a schedule of upcoming live webinars related to palliative care in the time of COVID-19, take a look at our <a href="https://bc-cpc.ca/cpc/events/">Events</a> calendar.
+                            For a schedule of upcoming live webinars related to palliative care in the time of COVID-19, take a look at our <a href="https://bc-cpc.ca/cpc/events/">Events</a> calendar. <br /> <br />
+
+                            We would appreciate your feedback on this resource library. Click the ‘Feedback Survey’ button on the left hand side of the screen to fill out a short survey.
                         </Typography>
                     </div>
 
